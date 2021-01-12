@@ -1,42 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memmove.c                                          :+:      :+:    :+:   */
+/*   memchr.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rponsonn <rponsonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/06 16:39:19 by rponsonn          #+#    #+#             */
-/*   Updated: 2021/01/08 16:06:51 by rponsonn         ###   ########.fr       */
+/*   Created: 2021/01/08 16:07:56 by rponsonn          #+#    #+#             */
+/*   Updated: 2021/01/11 14:04:33 by rponsonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
+#include <stdio.h>
 
-void *ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char *from;
-	unsigned char *to;
+	unsigned char cmp;
+	unsigned char *src;
 	size_t i;
 
-	from = src;
-	to = dst;
+	cmp = c;
 	i = 0;
-	if (dst > src)
+	src = (unsigned char *)s;
+	while (i < n)
 	{
-		while (i < len)
+		if (cmp == src[i])
 		{
-			to[len - 1] = from[len - 1];
-			len--;
+			return ((void *)src + i);
 		}
+		i++;
 	}
-	else
-	{
-		while (i < len)
-		{
-			to[i] = from[i];
-			i++;
-		}
-	}
-	return (dst);	
+	return (0);
 }
-//if dest is after src write backwards

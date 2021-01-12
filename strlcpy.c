@@ -1,42 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memmove.c                                          :+:      :+:    :+:   */
+/*   strlcpy.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rponsonn <rponsonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/06 16:39:19 by rponsonn          #+#    #+#             */
-/*   Updated: 2021/01/08 16:06:51 by rponsonn         ###   ########.fr       */
+/*   Created: 2021/01/11 15:06:48 by rponsonn          #+#    #+#             */
+/*   Updated: 2021/01/11 16:24:08 by rponsonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
-
-void *ft_memmove(void *dst, const void *src, size_t len)
+//first calc length of source, if the source is smaller than the destination transfer data, be sure to null terminate then return strlen of src
+size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	unsigned char *from;
-	unsigned char *to;
-	size_t i;
+	size_t retsize;
 
-	from = src;
-	to = dst;
-	i = 0;
-	if (dst > src)
+	retsize = ft_strlen(src);
+
+	if (dstsize > retsize + 1)
 	{
-		while (i < len)
-		{
-			to[len - 1] = from[len - 1];
-			len--;
-		}
+		ft_memcpy(dst, src, retsize + 1);
 	}
-	else
+	else if (dstsize)
 	{
-		while (i < len)
-		{
-			to[i] = from[i];
-			i++;
-		}
+		ft_memcpy(dst, src, dstsize - 1);
+		dst[dstsize - 1] = '\0';
 	}
-	return (dst);	
+	return (retsize);
 }
-//if dest is after src write backwards
