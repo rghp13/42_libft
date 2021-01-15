@@ -3,13 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   memset.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rponsonn <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: rponsonn <rponsonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 14:37:15 by rponsonn          #+#    #+#             */
-/*   Updated: 2021/01/04 14:37:25 by rponsonn         ###   ########.fr       */
+/*   Updated: 2021/01/15 14:28:33 by rponsonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
+
 #include <string.h>
 
 void *ft_memset(void *str, int c, size_t len)
