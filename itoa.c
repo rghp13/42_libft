@@ -1,52 +1,59 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   atoi.c                                             :+:      :+:    :+:   */
+/*   itoa.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rponsonn <rponsonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/13 17:34:38 by rponsonn          #+#    #+#             */
-/*   Updated: 2021/01/19 14:28:23 by rponsonn         ###   ########.fr       */
+/*   Created: 2021/01/19 15:21:06 by rponsonn          #+#    #+#             */
+/*   Updated: 2021/01/19 17:11:10 by rponsonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isspace(char str)
+char	*ft_arr2str(char *arr, int neg, int max)
 {
-	int flag;
+	char	*ptr;
+	int		i;
+	int		c;
 
-	flag = 0;
-	if (str == ' ')
-		flag = 1;
-	else if (str >= '\t' && str <= '\r')
-		flag = 1;
-	return (flag);
+	i = 0;
+	c = max;
+	if (!(ptr = malloc(sizeof(char) * max + neg)))
+		return (NULL);
+	if (neg)
+		ptr[i++] = '-';
+	while (c >= 0)
+	{
+		ptr[i++] = arr[c--];
+	}
+	ptr[i] = '\0';
 }
 
-int		ft_atoi(const char *str)
+char	*ft_itoa(int n)
 {
 	long int	num;
+	char		*ptr;
+	char		arr[12];
 	int			i;
 	int			neg;
 
+	num = (long int)n;
 	i = 0;
 	neg = 0;
-	num = 0;
-	while (ft_isspace(str[i]))
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	if (num < 0)
 	{
-		if (str[i] == '-')
-			neg++;
-		i++;
-	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		num = (10 * num) + (str[i] - '0');
-		i++;
-	}
-	if (neg % 2)
 		num = -num;
-	return (num);
+		neg = 1;
+	}
+	if (num == 0)
+		arr[i] = '0';
+	while (num > 0)
+	{
+		arr[i++] = (num % 10) + ASCII;
+		num /= 10;
+	}
+	ptr = ft_arr2str(arr, neg, i);
+	return (ptr);
 }

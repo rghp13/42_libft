@@ -6,17 +6,17 @@
 /*   By: rponsonn <rponsonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/06 16:39:19 by rponsonn          #+#    #+#             */
-/*   Updated: 2021/01/08 16:06:51 by rponsonn         ###   ########.fr       */
+/*   Updated: 2021/01/19 14:41:50 by rponsonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-void *ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char *from;
-	unsigned char *to;
-	size_t i;
+	unsigned char	*from;
+	unsigned char	*to;
+	size_t			i;
 
 	from = src;
 	to = dst;
@@ -37,6 +37,5 @@ void *ft_memmove(void *dst, const void *src, size_t len)
 			i++;
 		}
 	}
-	return (dst);	
+	return (dst);
 }
-//if dest is after src write backwards

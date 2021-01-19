@@ -6,12 +6,11 @@
 /*   By: rponsonn <rponsonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/15 14:26:16 by rponsonn          #+#    #+#             */
-/*   Updated: 2021/01/15 15:42:32 by rponsonn         ###   ########.fr       */
+/*   Updated: 2021/01/19 14:42:34 by rponsonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strdup(const char *s1)
 {
