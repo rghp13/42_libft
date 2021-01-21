@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+//Code is having problem with a input of 0
 char	*ft_arr2str(char *arr, int neg, int max)
 {
 	char	*ptr;
@@ -19,8 +19,8 @@ char	*ft_arr2str(char *arr, int neg, int max)
 	int		c;
 
 	i = 0;
-	c = max;
-	if (!(ptr = malloc(sizeof(char) * max + neg)))
+	c = max - 1;
+	if (!(ptr = malloc(sizeof(char) * max + neg + 1)))
 		return (NULL);
 	if (neg)
 		ptr[i++] = '-';
@@ -29,6 +29,18 @@ char	*ft_arr2str(char *arr, int neg, int max)
 		ptr[i++] = arr[c--];
 	}
 	ptr[i] = '\0';
+	return (ptr);
+}
+
+char	*ft_zero_string(void)
+{
+	char *ptr;
+
+	if (!(ptr = malloc(sizeof(char) * 2)))
+		return (NULL);
+	ptr[0] = '0';
+	ptr[1] = '\0';
+	return (ptr);
 }
 
 char	*ft_itoa(int n)
@@ -48,7 +60,7 @@ char	*ft_itoa(int n)
 		neg = 1;
 	}
 	if (num == 0)
-		arr[i] = '0';
+		return (ptr = ft_zero_string());
 	while (num > 0)
 	{
 		arr[i++] = (num % 10) + ASCII;
