@@ -6,12 +6,12 @@
 /*   By: rponsonn <rponsonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/19 15:21:06 by rponsonn          #+#    #+#             */
-/*   Updated: 2021/01/19 17:11:10 by rponsonn         ###   ########.fr       */
+/*   Updated: 2021/01/22 12:34:49 by rponsonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//Code is having problem with a input of 0
+
 char	*ft_arr2str(char *arr, int neg, int max)
 {
 	char	*ptr;
