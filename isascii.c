@@ -6,7 +6,7 @@
 /*   By: rponsonn <rponsonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/14 17:28:05 by rponsonn          #+#    #+#             */
-/*   Updated: 2021/01/19 14:31:17 by rponsonn         ###   ########.fr       */
+/*   Updated: 2021/01/24 16:47:41 by rponsonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,4 +16,6 @@ int	ft_isascii(int c)
 {
 	if (c >= 0x00 && c <= 0x7f)
 		return (1);
+	else
+		return (0);
 }

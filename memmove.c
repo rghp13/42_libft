@@ -6,7 +6,7 @@
 /*   By: rponsonn <rponsonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/06 16:39:19 by rponsonn          #+#    #+#             */
-/*   Updated: 2021/01/19 14:41:50 by rponsonn         ###   ########.fr       */
+/*   Updated: 2021/01/24 16:23:25 by rponsonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	unsigned char	*to;
 	size_t			i;
 
-	from = src;
+	from = (unsigned char *)src;
 	to = dst;
 	i = 0;
 	if (dst > src)

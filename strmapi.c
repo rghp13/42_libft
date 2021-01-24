@@ -6,7 +6,7 @@
 /*   By: rponsonn <rponsonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 12:35:06 by rponsonn          #+#    #+#             */
-/*   Updated: 2021/01/22 12:54:48 by rponsonn         ###   ########.fr       */
+/*   Updated: 2021/01/24 16:49:16 by rponsonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 	ptr[len] = '\0';
 	while (i < len)
 	{
-		ptr[i] = (*f)(i, s[i++]);
+		ptr[i] = (*f)(i, s[i]);
+		i++;
 	}
 	return (ptr);
 }
