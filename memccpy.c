@@ -6,7 +6,7 @@
 /*   By: rponsonn <rponsonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/06 14:44:28 by rponsonn          #+#    #+#             */
-/*   Updated: 2021/01/24 16:22:49 by rponsonn         ###   ########.fr       */
+/*   Updated: 2021/01/26 15:09:29 by rponsonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	size_t			i;
 
 	i = 0;
-	to = dst;
+	to = (unsigned char *)dst;
 	from = (unsigned char *)src;
-	while (i < n || *from != (unsigned char)c)
+	while (i < n && *from != (unsigned char)c)
 	{
 		*to++ = *from++;
 		i++;

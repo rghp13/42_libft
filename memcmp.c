@@ -6,7 +6,7 @@
 /*   By: rponsonn <rponsonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/11 13:47:16 by rponsonn          #+#    #+#             */
-/*   Updated: 2021/01/19 14:40:35 by rponsonn         ###   ########.fr       */
+/*   Updated: 2021/01/26 15:32:58 by rponsonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,6 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		{
 			return (str1[i] - str2[i]);
 		}
-		if (str1[i] == '\0' && str2[i] == '\0')
-			return (0);
 		i++;
 	}
 	return (0);

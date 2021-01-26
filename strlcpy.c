@@ -6,7 +6,7 @@
 /*   By: rponsonn <rponsonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/11 15:06:48 by rponsonn          #+#    #+#             */
-/*   Updated: 2021/01/19 14:44:03 by rponsonn         ###   ########.fr       */
+/*   Updated: 2021/01/26 15:50:05 by rponsonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	retsize;
 
+	if (!dst || !src)
+		return (0);
 	retsize = ft_strlen(src);
 	if (dstsize > retsize + 1)
 	{
