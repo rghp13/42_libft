@@ -6,7 +6,7 @@
 /*   By: rponsonn <rponsonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 12:53:27 by rponsonn          #+#    #+#             */
-/*   Updated: 2021/01/19 14:43:07 by rponsonn         ###   ########.fr       */
+/*   Updated: 2021/01/27 13:05:59 by rponsonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	srclen = ft_strlen(src);
 	if (srclen == 0)
 		return (dstlen);
-	if (dstsize == dstlen)
+	if (dstsize <= dstlen)
 		return (srclen + dstsize);
-	else if (srclen < dstsize - dstlen)
+	else if (srclen + dstlen < dstsize)
 		ft_memcpy(dst + dstlen, src, srclen + 1);
 	else
 	{

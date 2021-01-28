@@ -6,7 +6,7 @@
 /*   By: rponsonn <rponsonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/18 12:50:19 by rponsonn          #+#    #+#             */
-/*   Updated: 2021/01/18 13:35:58 by rponsonn         ###   ########.fr       */
+/*   Updated: 2021/01/28 13:57:58 by rponsonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	rlen;
 	char	*ptr;
 
+	if (!s)
+		return (NULL);
+	if (ft_strlen(s) < start)
+		return (ptr = malloc(sizeof(char) * 1));
 	rlen = ft_strlen(s + start);
 	if (rlen < len)
 		len = rlen;

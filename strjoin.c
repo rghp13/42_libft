@@ -6,7 +6,7 @@
 /*   By: rponsonn <rponsonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/18 13:36:24 by rponsonn          #+#    #+#             */
-/*   Updated: 2021/01/18 14:49:12 by rponsonn         ###   ########.fr       */
+/*   Updated: 2021/01/28 14:10:13 by rponsonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	int		len;
 	char	*ptr;
 
+	if (!s1 || !s2)
+		return (NULL);
 	len = ft_strlen(s1) + ft_strlen(s2);
 	if (!(ptr = malloc(sizeof(char) * len + 1)))
 		return (NULL);

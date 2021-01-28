@@ -6,7 +6,7 @@
 /*   By: rponsonn <rponsonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 14:18:02 by rponsonn          #+#    #+#             */
-/*   Updated: 2021/01/24 16:44:00 by rponsonn         ###   ########.fr       */
+/*   Updated: 2021/01/27 14:15:27 by rponsonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ char	*ft_strnstr(const char *haystack, const char *n, size_t len)
 	nlen = ft_strlen(n);
 	if (n[0] == '\0')
 		return ((char *)haystack);
+	if (len < nlen && haystack)
+		return (NULL);
 	while (i <= len - nlen)
 	{
 		if (haystack[i] == n[0])

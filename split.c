@@ -6,7 +6,7 @@
 /*   By: rponsonn <rponsonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/19 12:58:35 by rponsonn          #+#    #+#             */
-/*   Updated: 2021/01/19 15:20:15 by rponsonn         ###   ########.fr       */
+/*   Updated: 2021/01/28 14:54:54 by rponsonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,8 @@ char	**ft_split(const char *s, char c)
 	int		endpoint;
 	int		i;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	endpoint = 0;
 	tally = ft_get_word_tally(s, c);
