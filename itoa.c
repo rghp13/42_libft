@@ -6,13 +6,13 @@
 /*   By: rponsonn <rponsonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/19 15:21:06 by rponsonn          #+#    #+#             */
-/*   Updated: 2021/01/22 12:34:49 by rponsonn         ###   ########.fr       */
+/*   Updated: 2021/01/30 13:34:10 by rponsonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_arr2str(char *arr, int neg, int max)
+static char	*ft_arr2str(char *arr, int neg, int max)
 {
 	char	*ptr;
 	int		i;
@@ -32,7 +32,7 @@ char	*ft_arr2str(char *arr, int neg, int max)
 	return (ptr);
 }
 
-char	*ft_zero_string(void)
+static char	*ft_zero_string(void)
 {
 	char *ptr;
 
@@ -43,7 +43,7 @@ char	*ft_zero_string(void)
 	return (ptr);
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	long int	num;
 	char		*ptr;

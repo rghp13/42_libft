@@ -6,13 +6,13 @@
 /*   By: rponsonn <rponsonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 14:18:02 by rponsonn          #+#    #+#             */
-/*   Updated: 2021/01/27 14:15:27 by rponsonn         ###   ########.fr       */
+/*   Updated: 2021/01/30 13:39:52 by rponsonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_str_check(const char *haystack, const char *needle, int nlen)
+static int	ft_str_check(const char *haystack, const char *needle, int nlen)
 {
 	int i;
 
@@ -27,7 +27,7 @@ int		ft_str_check(const char *haystack, const char *needle, int nlen)
 		return (0);
 }
 
-char	*ft_strnstr(const char *haystack, const char *n, size_t len)
+char		*ft_strnstr(const char *haystack, const char *n, size_t len)
 {
 	size_t	i;
 	size_t	nlen;

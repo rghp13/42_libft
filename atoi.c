@@ -6,13 +6,13 @@
 /*   By: rponsonn <rponsonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 17:34:38 by rponsonn          #+#    #+#             */
-/*   Updated: 2021/01/27 15:52:31 by rponsonn         ###   ########.fr       */
+/*   Updated: 2021/01/30 13:46:08 by rponsonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isspace(char str)
+static int	ft_isspace(char str)
 {
 	int flag;
 
@@ -24,7 +24,7 @@ int		ft_isspace(char str)
 	return (flag);
 }
 
-int		ft_atoi(const char *str)
+int			ft_atoi(const char *str)
 {
 	unsigned long int	num;
 	int					i;

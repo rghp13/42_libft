@@ -6,13 +6,13 @@
 /*   By: rponsonn <rponsonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/19 12:58:35 by rponsonn          #+#    #+#             */
-/*   Updated: 2021/01/28 14:54:54 by rponsonn         ###   ########.fr       */
+/*   Updated: 2021/01/31 14:23:30 by rponsonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_get_string(int *end, const char *s, char c)
+static char	*ft_get_string(int *end, const char *s, char c)
 {
 	int		i;
 	int		num;
@@ -39,7 +39,7 @@ char	*ft_get_string(int *end, const char *s, char c)
 	return (ptr);
 }
 
-int		ft_get_word_tally(const char *s, char c)
+static int	ft_get_word_tally(const char *s, char c)
 {
 	int	num;
 	int	words;
@@ -64,7 +64,7 @@ int		ft_get_word_tally(const char *s, char c)
 	return (num);
 }
 
-char	**ft_split(const char *s, char c)
+char		**ft_split(const char *s, char c)
 {
 	int		tally;
 	char	**tab;
@@ -76,7 +76,7 @@ char	**ft_split(const char *s, char c)
 	i = 0;
 	endpoint = 0;
 	tally = ft_get_word_tally(s, c);
-	if (!(tab = malloc(sizeof(char*) * tally + 1)))
+	if (!(tab = malloc(sizeof(char*) * (tally + 1))))
 		return (NULL);
 	tab[tally] = NULL;
 	while (i < tally)

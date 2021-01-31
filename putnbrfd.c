@@ -6,7 +6,7 @@
 /*   By: rponsonn <rponsonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 15:18:51 by rponsonn          #+#    #+#             */
-/*   Updated: 2021/01/22 16:23:58 by rponsonn         ###   ########.fr       */
+/*   Updated: 2021/01/30 15:17:10 by rponsonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@ void	ft_putnbr_fd(int n, int fd)
 	long int i;
 
 	i = n;
-	if (i == 0)
-		ft_putchar_fd('0', fd);
 	if (i < 0)
 	{
 		ft_putchar_fd('-', fd);
 		i = -i;
 	}
-	if (i > 9)
+	if (i == 0)
+		ft_putchar_fd('0', fd);
+	else if (i > 9)
 	{
 		ft_putnbr_fd(i / 10, fd);
 		ft_putchar_fd((i % 10) + '0', fd);
