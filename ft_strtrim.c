@@ -6,7 +6,7 @@
 /*   By: rponsonn <rponsonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/18 15:32:47 by rponsonn          #+#    #+#             */
-/*   Updated: 2021/01/30 17:18:02 by rponsonn         ###   ########.fr       */
+/*   Updated: 2021/02/01 13:14:08 by rponsonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ char		*ft_strtrim(const char *s1, const char *set)
 		if (!(ptr = malloc(sizeof(char) * 1)))
 			return (NULL);
 		ptr[0] = '\0';
-		return (pt);
+		return (ptr);
 	}
 	k = ft_cut_end(s1, set);
 	k++;
