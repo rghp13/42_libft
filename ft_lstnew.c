@@ -15,15 +15,18 @@
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*ptr;
-	void	*cptr;
 
 	if (!(ptr = malloc(sizeof(t_list))))
 		return (NULL);
-	if (!content)
-		cptr = NULL;
+	if (content == NULL)
+	{
+		ptr->content = NULL;
+		ptr->next = NULL;
+	}
 	else
-		cptr = ft_strdup(content);
-	ptr->content = cptr;
-	ptr->next = NULL;
+	{
+		ptr->content = content;
+		ptr->next = NULL;
+	}
 	return (ptr);
 }
